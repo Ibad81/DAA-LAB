@@ -1,0 +1,93 @@
+Name :Ibad Baig
+Roll no :21
+
+
+1) Linear Search
+
+import java.util.Scanner;
+
+public class Linear_search_meethod {
+    public static int search(int arr[],int target){
+        for (int i = 0; i < arr.length; i++) {
+            if(arr[i]==target){
+                return i;
+            }
+        }
+        return -1;
+    }
+    
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        int n=sc.nextInt();
+        int [] arr=new int [n];
+        for (int index = 0; index < n; index++) {
+            arr[index]=sc.nextInt();
+        }
+        int target=sc.nextInt();
+        int res=search(arr, target);
+        System.out.println(res);
+    }
+}
+
+
+2) Binary Search
+
+import java .util.Scanner;
+public class Binary_search {
+
+    public static int Binary(int arr[],int target){
+        int first=0;
+        int last=arr.length-1;
+        while(first<=last){
+            int mid=(first+last)/2;
+            if(target==arr[mid]){
+                return mid;
+            }
+            else if(target>arr[mid]){
+                first=mid+1;
+            }
+            else{
+                last=mid-1;
+            }
+        }
+        return -1;
+    }
+
+
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        int n=sc.nextInt();
+        int [] arr=new int [n];
+        for (int index = 0; index < n; index++) {
+            arr[index]=sc.nextInt();
+        }
+        int target=sc.nextInt();
+        int res=Binary(arr, target);
+        System.out.println(res);
+    }
+}
+
+3) 
+for (int i = 1; i < n; i++) {
+         for (int j = 1; j <= i; j++) {
+                for (int j2 = 1; j2 <=100; j2++) {
+                    count++;
+                }
+                
+          }
+}
+
+
+Answer:
+
+i=1		i=2		i=3
+j=1		j=2		j=3
+k=1*100		k=2*100		k=3*100
+
+100{1+2+3+-----}
+100*(n(n+1))/2
+100/2(n^2+n}
+
+O(n^2)
+
+
